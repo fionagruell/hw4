@@ -41,13 +41,15 @@ void write(double* p, const int N){
 }
 
 int main(void){
+  
   int n; //Anzahl der Glättungsdurchläufe
+  n=1;
   const string filename="noisy.txt";
   const int N=237; //# Zeilen zum Auslesen, hier fest
   double* p=new double[N];
-  cout << "Bitte Zahl n der Glättungsvorgänge angeben" << endl;
-  cin >> n;
-  cout << n << "  wurde eingegeben" << endl;
+  //cout << "Bitte Zahl n der Glättungsvorgänge angeben" << endl;
+  //cin >> n;
+  //cout << n << "  wurde eingegeben" << endl;
   read(p,N,filename);
   for(int i=1; i<=n;i++){
   filter(p,N);
